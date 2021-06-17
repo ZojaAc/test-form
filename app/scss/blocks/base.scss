@@ -1,0 +1,10 @@
+.base {
+  background-color: $bg-body;
+  padding: 75px 80px;
+  margin: 0 auto;
+  height: 100vh;
+
+  @include mobile {
+    padding: 60px 0;
+  }
+}

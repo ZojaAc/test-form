@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="RU">
+<head>
+  @@include('page/head-data.html')  
+</head>
+
+<body>
+  <!-- @@include('blocks/header.html') -->
+  <svg style="display: none;">
+    <symbol id="arrow-right" viewBox="0 0 18 12">
+      <path d="M1.5 6H16.5M16.5 6L11.5 1M16.5 6L11.5 11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="arrow-bottom" viewBox="0 0 11 6">
+        <path d="M1.18182 1L5.18182 5L9.18182 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+  </svg>
+
+  <div class="base">
+    <div class="frame">
+      <div class="frame__block frame__block--left">
+        <div class="frame__name">Reduslim</div>
+        <div class="frame__focus">ECO</div>
+        <picture class="frame__mask">
+          <source type="image/webp" media="(max-width: 767.9px)" srcset="img/image-group-mobile2.webp">
+          <source type="image/webp" srcset="img/image-group2.webp">
+          <source media="(max-width: 767.9px)" srcset="img/image-group-mobile.png">
+          <img class="frame__img" src="img/image-group.png" alt="main-image">
+        </picture>        
+      </div>
+      <div class="frame__block frame__block--right">
+        <h2 class="frame__title">Сделай шаг&nbsp;<br class="frame__title-br">к выздоровлению</h2>
+        <form class="frame__action form">
+          <div class="form__container">
+            <div class="form__item">
+              <label class="form__title" for="name">ваше <span class="form__marker">имя</span></label>
+              <input class="form__cell" id="name" name="Ваше имя:" type="text" required autofocus placeholder="Алексей">
+            </div>          
+            <div class="form__item form__item--columns">
+              <div class="form__item-left">
+                <label class="form__title" for="phone">ваш <span class="form__marker">телефон</span></label>
+                <input class="form__cell" id="phone" name="Ваш телефон:" type="tel" required placeholder="+7 (123) 456 78-90" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+              </div>
+              <div class="form__item-right">
+                <div class="form__item-select">
+                  <svg class="form__select-arrow">
+                    <use xlink:href="#arrow-bottom"/>
+                  </svg>
+                  <img class="form__select-flag" src="img/flag.png" alt="ru flag">
+                  <select class="form__select form__cell" name="Язык">
+                    <option selected value="ru">RU</option>
+                    <option value="en">EN</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <button class="form__button" type="submit">Заказать
+              <svg class="form__button-arrow">
+                <use xlink:href="#arrow-right"/>
+              </svg>
+            </button>
+          </div>
+        </form>
+        <div class="frame__footer">
+          <span class="frame__trust">Trusted</span>
+          <img class="frame__lock" src="img/lock.png" alt="img-lock">
+          <span class="frame__secure">Secure</span>
+        </div>        
+      </div>      
+    </div>
+  </div>
+
+  <!-- @@include('blocks/footer.html') -->
+</body>
+</html>
